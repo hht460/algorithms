@@ -1,6 +1,8 @@
-package njupt.ch1.EX;
+package sort.njupt;
 
-
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -14,7 +16,7 @@ public class Selection {
 		for(int i = 0; i < N; i++){
 			int min = i;
 			for(int j = i+1; j < N; j++){
-				if(a[j].compareTo(a[min]) < 0){
+				if(less(a[j], a[min])){
 					min = j;
 				}
 			    exch(a, i, min);
@@ -53,17 +55,47 @@ public class Selection {
 	}
 	
 	public static void main(String[] args){
-		//从标准输入中读取字符串，将他们排序并输出
-		Scanner input = new Scanner(System.in);
-		System.out.println("please input number...");
-		int N = input.nextInt();
-		String[] a = new String[N];
-		for(int i = 0; i < a.length; i++){
-			a[i] = input.next();
+//		//从标准输入中读取字符串，将他们排序并输出
+//		Scanner input = new Scanner(System.in);
+//		System.out.println("please input number...");
+//		int N = input.nextInt();
+//		String[] a = new String[N];
+//		for(int i = 0; i < a.length; i++){
+//			a[i] = input.next();
+//		}
+		
+		
+		File file = new File("E:\\test_data\\test_data.txt");
+		String[] myArray = new String[1000];  //100：这个值你自己定义，但不宜过大，要根据你文件的大小了，或者文件的行数
+		//建立数据的输入通道
+		int i = 0;
+		try {
+			FileReader fr = new FileReader(file);
+			BufferedReader buf = new BufferedReader(fr);
+            String readLine = "";
+            while((readLine = buf.readLine()) != null){
+                myArray[i] = readLine;
+                i++;
+            }
+            buf.close();
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
+		
+		System.out.println(i);
+		System.out.println(myArray.length);
+		String[] a = new String[i];
+        for(int j=0; j < i; j++){
+        	a[j] = myArray[j];
+        }
+        
 		System.out.println(Arrays.toString(a));
+		long start = System.currentTimeMillis();
 		sort(a);
+		long end = System.currentTimeMillis();
 		assert isSorted(a);
 		show(a);
+		System.out.println(end-start);	
 	}
 }
+

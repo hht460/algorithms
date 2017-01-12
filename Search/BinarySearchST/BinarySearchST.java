@@ -144,6 +144,7 @@ public class BinarySearchST <Key extends Comparable<Key>, Value>{
 		return keys[N-1];
 	}
 	
+	//选择
 	public Key select(int k){
 		return keys[k];
 	}

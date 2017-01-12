@@ -1,4 +1,4 @@
-package search.linklist;
+package njupt.search.linkedlist;
 
 import java.util.Iterator;
 /**

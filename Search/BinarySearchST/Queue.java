@@ -67,7 +67,7 @@ public class Queue<Item> implements Iterable<Item>{
 			current = current.next;
 			return item;
 		}
-		public void remove(){}
+		public void remove(){} // 没有实现
 	}
 	/**
 	 * 接口Iterable<?> 中只有一个方法 即 iterator()  

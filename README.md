@@ -1,2 +1,2 @@
 # algorithms
-use java implments
+use java implmention

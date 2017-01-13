@@ -4,7 +4,7 @@ package njupt.string.search;
  * 维护了两个指针
  * 指针  i 跟踪 文本  ; 指针 j 跟踪模式
  **/
-public class StringSearch {
+public class ViolenceStringSearch {
 	public static int search(String pat, String txt){
 		int M = pat.length();
 		int N = txt.length();

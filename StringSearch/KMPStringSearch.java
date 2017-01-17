@@ -44,7 +44,7 @@ public class KMPStringSearch {
 				i++;
 				j++;
 			}else{
-				j = next[j];
+				j = next[j];  //当对应字符不匹配时，根据next[]函数 将模式指针j返回到合适位置
 			}
 		}
 		if(j < p.length()){

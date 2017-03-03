@@ -2,7 +2,7 @@ package sort.njupt;
 
 import java.util.Scanner;
 /**
- * 排序算法模板适用于任�?  实现了Comparable接口�?   数据类型
+ * 排序算法模板适用于任使  实现了Comparable接口皿   数据类型
  */
 public class Example {
 	public static void sort(Comparable[] a)

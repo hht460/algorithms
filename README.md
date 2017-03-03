@@ -1,2 +1,0 @@
-# algorithms
-use java implmention

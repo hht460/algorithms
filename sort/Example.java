@@ -1,4 +1,4 @@
-package sort.njupt;
+﻿package sort.njupt;
 
 import java.util.Scanner;
 /**
